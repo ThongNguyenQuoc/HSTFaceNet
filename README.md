@@ -1,15 +1,19 @@
 # HSTFaceNet
 
-## 📋 Table of Contents
+##  Table of Contents
 
+---
 1. [Overview](#1-overview)  
 2. [Installation](#2-installation)  
 3. [Attention Fix for MXNet (Optional)](#3-attention-fix-for-mxnet-optional)  
 4. [Dataset Preparation](#4-dataset-preparation)  
 5. [Training model](#5-training-model)  
-    - [5.1 Train model at ElasticFace](#51-Train-model-at-ElasticFace)  
-    - [5.2  Train model at AdaFace + PartialFC](#52-Train-model-at-AdaFace-PartialFC)  
-6. [Result](#6-Result)  
+   - [5.1 Train model at ElasticFace](#51-train-model-at-elasticface)  
+   - [5.2 Train model at AdaFace + PartialFC](#52-train-model-at-adaface--partialfc)  
+6. [Result](#6-result)  
+   - [6.1 ElasticFace](#61-elasticface)  
+   - [6.2 AdaFace + PartialFC](#62-adaface--partialfc)  
+
 ---
 
 ## 1. Overview
