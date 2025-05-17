@@ -50,6 +50,21 @@ sed -i 's/bool = onp.bool/bool = bool/' /usr/local/lib/python3.11/dist-packages/
 
 ```
 
+if you want to begin train at ElasticFace, there is the line called 
+```bash
+if args.resume:
+    #     try:
+    #         backbone_pth = os.path.join(cfg.output, str(cfg.global_step) + "backbone.pth")
+    #         backbone.load_state_dict(torch.load(backbone_pth, map_location=torch.device(local_rank)))
+
+    #         if rank == 0:
+    #             logging.info("backbone resume loaded successfully!")
+    #     except (FileNotFoundError, KeyError, IndexError, RuntimeError):
+    #         logging.info("load backbone resume init, failed!")
+```
+
+You can uncomment it, start to train
+
 ## 4. Dataset Preparation
 
 ElasticArcFace is compatible with various face recognition datasets such as:
