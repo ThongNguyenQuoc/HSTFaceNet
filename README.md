@@ -63,7 +63,7 @@ if you want to begin train at ElasticFace, there is the line called
     #         logging.info("load backbone resume init, failed!")
 ```
 
-You can uncomment it, start to train, i want to comment it to prevent the backbone after i trained cannot load it successfully
+You can uncomment it, start to train, i want to comment it to prevent the backbone after i trained cannot load it successfully after i use pretrained model
 
 
 ## 4. Dataset Preparation
