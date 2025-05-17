@@ -60,7 +60,7 @@ You can use the public datasets provided by [InsightFace Datasets Repository](ht
 
 ### Example Datasets Link:
 - 📦 MS1MV2  (List & Download Scripts):  
-  https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_
+  https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_/
 
 ### Dataset Structure Example:
 
