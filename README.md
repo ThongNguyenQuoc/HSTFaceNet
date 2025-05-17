@@ -52,7 +52,7 @@ sed -i 's/bool = onp.bool/bool = bool/' /usr/local/lib/python3.11/dist-packages/
 
 if you want to begin train at ElasticFace, there is the line called 
 ```bash
-if args.resume:
+# if args.resume:
     #     try:
     #         backbone_pth = os.path.join(cfg.output, str(cfg.global_step) + "backbone.pth")
     #         backbone.load_state_dict(torch.load(backbone_pth, map_location=torch.device(local_rank)))
@@ -63,7 +63,8 @@ if args.resume:
     #         logging.info("load backbone resume init, failed!")
 ```
 
-You can uncomment it, start to train
+You can uncomment it, start to train, i want to comment it to prevent the backbone after i trained cannot load it successfully
+
 
 ## 4. Dataset Preparation
 
