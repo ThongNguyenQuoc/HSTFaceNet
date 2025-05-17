@@ -62,5 +62,57 @@ You can use the public datasets provided by [InsightFace Datasets Repository](ht
 - 📦 MS1MV2  (List & Download Scripts):  
   https://github.com/deepinsight/insightface/tree/master/recognition/_datasets_/
 
-### Dataset Structure Example:
+## 5. Training model
+### 5.1. Train model at ElasticFace
+#### a) Train at Kaggle with 2 GPU
+```bash
+!CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --nnodes=1 --node_rank=0 --master_addr="127.0.0.1" --master_port=1234 train.py 
+```
 
+#### b) Train at Kaggle with 1 GPU (optional device)
+```bash
+!CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=2 --nnodes=1 --node_rank=0 --master_addr="127.0.0.1" --master_port=1234 train.py 
+```
+
+#### c) If you want to continue train (optional)
+First, customize the line name called "global_step" to actual your model after have this
+For example: 22744backbone.pth -> global_step = 22744
+```bash
+!CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --nnodes=1 --node_rank=0 --master_addr="127.0.0.1" --master_port=1234 train.py --resume 1
+```
+### 5.2. Train model at AdaFace + PartialFC
+```bash
+!CUDA_VISIBLE_DEVICES=0,1 torchrun \
+  --nproc_per_node=2 \
+  --nnodes=1 \
+  --node_rank=0 \
+  --master_addr="127.0.0.1" \
+  --master_port=1234 \
+  train.py configs/ms1mv2_r50.py
+```
+
+## 6. Result
+### 6.1. ElasticFace
+## Results
+
+## Training Results
+
+| Global Step | Margin (M) | Epoch | Dataset   | LFW Accuracy (%) |
+|-------------|------------|-------|-----------|------------------|
+| 352532      | 0.5        | 30    | MS1MV2    | 99.117           |
+| 358218      | 0.6        | 31    | MS1MV2    | 99.223           |
+| 375276      | 0.6        | 32    | MS1MV2    | 99.167           |
+
+
+
+### 6.2. AdaFace + PartialFC
+## Results
+
+## Training Results
+
+| Global Step |Epoch | Dataset   | LFW Accuracy (%) |
+|-------------|------|---------- |------------------|
+| 11300       | 0    | MS1MV2    | 96.467           |
+| 22700       | 1    | MS1MV2    | 97.783           |
+| 34100       | 2    | MS1MV2    | 98.100           |
+| 41000       | 3    | MS1MV2    | 98.100           |
