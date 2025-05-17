@@ -6,14 +6,10 @@
 2. [Installation](#2-installation)  
 3. [Attention Fix for MXNet (Optional)](#3-attention-fix-for-mxnet-optional)  
 4. [Dataset Preparation](#4-dataset-preparation)  
-5. [Training](#5-training)  
-    - [5.1 Train ElasticFace](#51-train-elasticface-baseline)  
-    - [5.2 Train ElasticFace + AdaFace + PartialFC](#52-train-elasticface--adaface--partialfc)  
-    - [5.3 Train ElasticFace + AdaFace + Self-Attention](#53-train-elasticface--adaface--self-attention-enhanced-model)  
-6. [Evaluation](#6-evaluation)  
-7. [Results](#7-results)  
-8. [References](#8-references)  
-
+5. [Training model](#5-training-model)  
+    - [5.1 Train model at ElasticFace](#51-Train-model-at-ElasticFace)  
+    - [5.2  Train model at AdaFace + PartialFC](#52-Train-model-at-AdaFace-PartialFC)  
+6. [Result](#6-Result)  
 ---
 
 ## 1. Overview
